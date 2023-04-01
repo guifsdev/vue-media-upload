@@ -45,7 +45,7 @@
           class="mu-image-container"
         >
           <img
-            :src="location + '/' + image.name"
+            :src="image.url"
             alt=""
             class="mu-images-preview"
           />
