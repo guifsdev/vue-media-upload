@@ -188,6 +188,9 @@ export default {
             const { data } = await axios.post(this.server, formData);
             let addedImage = {
               url: url,
+              s3_url: data.s3_url,
+              file_hash: data.file_hash,
+              file_name: data.file_name,
               name: data.name,
               size: files[i].size,
               type: files[i].type,
