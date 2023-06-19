@@ -163,6 +163,10 @@ export default {
   methods: {
     init() {
       this.savedMedia = this.media;
+      console.log('Uploader > init()');
+
+      console.log(' media: ', this.media);
+      console.log(' savedMedia: ', this.savedMedia);
 
       this.savedMedia.forEach((image, index) => {
         if (!this.savedMedia[index].url) {
@@ -188,7 +192,9 @@ export default {
             const { data } = await axios.post(this.server, formData);
             let addedImage = {
               url: url,
-              s3_url: data.s3_url,
+              // s3_url: data.s3_url,
+              temp_url: data.temp_url,
+              
               file_hash: data.file_hash,
               file_name: data.file_name,
               name: data.name,
