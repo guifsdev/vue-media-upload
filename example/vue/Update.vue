@@ -97,7 +97,7 @@ import Uploader from 'vue-media-upload'
                     .catch(error => {
                         if(error.response.data){
                             this.errors = error.response.data.errors
-                            console.log(this.errors) 
+                            // console.log(this.errors) 
                         }
                         this.isLoading = false
                     })

@@ -148,9 +148,9 @@ export default {
       default: true,
     },
   },
-  mounted() {
-    this.init();
-  },
+  // mounted() {
+  //   this.init();
+  // },
   data() {
     return {
       addedMedia: [],
@@ -163,10 +163,10 @@ export default {
   methods: {
     init() {
       this.savedMedia = this.media;
-      console.log('Uploader > init()');
+      // console.log('Uploader > init()');
 
-      console.log(' media: ', this.media);
-      console.log(' savedMedia: ', this.savedMedia);
+      // console.log(' media: ', this.media);
+      // console.log(' savedMedia: ', this.savedMedia);
 
       this.savedMedia.forEach((image, index) => {
         if (!this.savedMedia[index].url) {
