@@ -366,7 +366,7 @@ export default {
 
 img {
   -webkit-user-drag: none;
-  -khtml-user-drag: none;
+  -khtme-user-drag: none;
   -moz-user-drag: none;
   -o-user-drag: none;
 }
