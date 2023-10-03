@@ -126,15 +126,14 @@ export default {
     },
     media: {
       type: Array,
-      // default: [],
       default() {
         return [];
       }
     },
-    location: {
-      type: String,
-      default: "",
-    },
+    // basePath: {
+    //   type: String,
+    //   default: "",
+    // },
     max: {
       type: Number,
       default: null,
@@ -148,15 +147,11 @@ export default {
       default: true,
     },
   },
-  // mounted() {
-  //   this.init();
-  // },
   data() {
     return {
       addedMedia: [],
       savedMedia: [],
       removedMedia: [],
-
       isLoading: true,
     };
   },
@@ -170,7 +165,8 @@ export default {
 
       this.savedMedia.forEach((image, index) => {
         if (!this.savedMedia[index].url) {
-          this.savedMedia[index].url = this.location + "/" + image.name;
+          // this.savedMedia[index].url = this.basePath + "/" + image.name;
+          this.savedMedia[index].url = image.url;
         }
       });
 
